@@ -47,7 +47,39 @@ The user_db.txt file contains user entries in a simple format:
 username:salt:password
 ```
 
-New users can be added by any admin account.  The uploaded user_db.txt is propagated with 2 users, an admin and user, for reference.  The program will let you create an admin account if you delete the entire contents of the user_db.txt file.
+New users can be added by any admin account.  The uploaded user_db.txt is propagated with 2 users, an admin and a normal user, for reference.  In order to use the program, **you must delete the contents of the user_db.txt file or the file entirely** (a new one will be automatically generated if it is not found).
 
+## Running the Server and Client
 
+Once the program is made, run the following commands in the CLI:
+```
+./server [port #]
+
+./client [ip] [server port #]
+```
+You can then log in and use the system.
+
+## Security Considerations
+
+- This is a hobby project to showcase knowledge of basic authentication principles and security. It is not production‑ready.
+
+- Passwords and salts are stored in a flat text file, rather than a proper key-value storage or database.
+
+- Hashing algorithms should be chosen carefully for resistance against modern attacks.
+
+- Transport security (TLS/SSL) is not implemented here, as I've only used this on the same computer, rather than over a network.  Using this over a network opens up potential vulnerabilities.
+
+## License
+
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL‑3.0).
+
+Users must comply with the terms of the AGPL when using, modifying, or redistributing this software.
+
+## Contributing
+
+Contributions are welcome. Please follow standard GitHub workflows.
+
+## Contact
+
+For questions about this project, open an issue on GitHub or contact the maintainers through the repository’s issue tracker.
 
